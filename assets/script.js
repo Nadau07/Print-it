@@ -14,9 +14,24 @@ let slideIndex = 1; //slide de depart
 
 slidesActive(slideIndex);
 
+let precedent = document.getElementById('precedent');
+let suivant = document.getElementById('suivant');
+
+suivant.addEventListener('click', function() {
+	plusSlides(1);
+});
+
+precedent.addEventListener('click', function() {
+	plusSlides(-1);
+  });
+
+
 function plusSlides(n){
 	slidesActive(slideIndex += n);
 }// quand je clique sur les fleches:passage à l'autre slide.
+
+
+
 console.log('plusSlides');
 function bulletSlide(n){
 } //changement bullet en meme temps que l'img
@@ -45,3 +60,4 @@ function slidesActive(n){
 	let taglineElement = document.querySelector('.tagline');
 	taglineElement.innerHTML = tagline;  // insérer la tagLine dans l'élément HTML qui correspond
 }
+
