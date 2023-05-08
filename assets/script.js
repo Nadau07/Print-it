@@ -17,6 +17,7 @@ slidesActive(slideIndex);
 let precedent = document.getElementById('precedent');
 let suivant = document.getElementById('suivant');
 
+
 suivant.addEventListener('click', function() {
 	plusSlides(1);
 });
@@ -31,9 +32,6 @@ function plusSlides(n){
 }// quand je clique sur les fleches:passage à l'autre slide.
 
 console.log('plusSlides');
-function bulletSlide(n){
-} //changement bullet en meme temps que l'img
-
 
 
 function slidesActive(n){
@@ -60,3 +58,14 @@ function slidesActive(n){
 	taglineElement.innerHTML = tagline;  // insérer la tagLine dans l'élément HTML qui correspond
 }
 
+//Changement de l'img du carrousel avec les bullets:
+
+function bulletSlide(n) {
+	slidesActive(slideIndex = n);
+}
+let bullets = document.getElementsByClassName('dot');
+for (let i = 0; i < bullets.length; i++) {
+	bullets[i].addEventListener('click', function() {
+		bulletSlide(i + 1);
+	});
+}
