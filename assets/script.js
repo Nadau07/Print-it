@@ -30,11 +30,10 @@ function plusSlides(n){
 	slidesActive(slideIndex += n);
 }// quand je clique sur les fleches:passage à l'autre slide.
 
-
-
 console.log('plusSlides');
 function bulletSlide(n){
 } //changement bullet en meme temps que l'img
+
 
 
 function slidesActive(n){
