@@ -35,8 +35,8 @@ console.log('plusSlides');
 
 
 function slidesActive(n){
-	let slides = document.getElementsByClassName('banner-img'); //recuperation des img
-	let dots = document.getElementsByClassName('dot'); //recuperation des dots
+	let slides = document.querySelectorAll('.banner-img'); //recuperation des img
+	let dots = document.querySelectorAll('.dot'); //recuperation des dots
 	if (n > slides.length){ slideIndex = 1}  //Si le nombre de slide est supérieur a la liste, ça retourne a la slide 1.
 	if (n < 1 ){ slideIndex = slides.length}
 
@@ -63,9 +63,11 @@ function slidesActive(n){
 function bulletSlide(n) {
 	slidesActive(slideIndex = n);
 }
-let bullets = document.getElementsByClassName('dot');
+let bullets = document.queryselectorAll('.dot');
 for (let i = 0; i < bullets.length; i++) {
 	bullets[i].addEventListener('click', function() {
 		bulletSlide(i + 1);
 	});
 }
+
+console.log(slides);
