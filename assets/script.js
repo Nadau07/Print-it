@@ -29,15 +29,14 @@ precedent.addEventListener('click', function() {
 
 function plusSlides(n){
 	slidesActive(slideIndex += n);
-}// quand je clique sur les fleches:passage à l'autre slide.
+}
 
-console.log('plusSlides');
 
 
 function slidesActive(n){
-	let slides = document.querySelectorAll('.banner-img'); //recuperation des img
-	let dots = document.querySelectorAll('.dot'); //recuperation des dots
-	if (n > slides.length){ slideIndex = 1}  //Si le nombre de slide est supérieur a la liste, ça retourne a la slide 1.
+	let slides = document.querySelectorAll('.banner-img'); 
+	let dots = document.querySelectorAll('.dot'); 
+	if (n > slides.length){ slideIndex = 1} 
 	if (n < 1 ){ slideIndex = slides.length}
 
 	for(let i = 0; i < slides.length; i++){
@@ -55,10 +54,10 @@ function slidesActive(n){
 	let tagline = taglines[slideIndex - 1]; 
 
 	let taglineElement = document.querySelector('.tagline');
-	taglineElement.innerHTML = tagline;  // insérer la tagLine dans l'élément HTML qui correspond
+	taglineElement.innerHTML = tagline; 
 }
 
-//Changement de l'img du carrousel avec les bullets:
+
 
 function bulletSlide(n) {
 	slidesActive(slideIndex = n);
@@ -69,5 +68,3 @@ for (let i = 0; i < bullets.length; i++) {
 		bulletSlide(i + 1);
 	});
 }
-
-console.log(slides);
