@@ -14,8 +14,8 @@ let slideIndex = 1; //slide de depart
 
 slidesActive(slideIndex);
 
-let precedent = document.getElementById('precedent');
-let suivant = document.getElementById('suivant');
+let precedent = document.querySelector('#precedent');
+let suivant = document.querySelector('#suivant');
 
 
 suivant.addEventListener('click', function() {
