@@ -56,15 +56,3 @@ function slidesActive(n){
 	let taglineElement = document.querySelector('.tagline');
 	taglineElement.innerHTML = tagline; 
 }
-
-
-
-function bulletSlide(n) {
-	slidesActive(slideIndex = n);
-}
-let bullets = document.queryselectorAll('.dot');
-for (let i = 0; i < bullets.length; i++) {
-	bullets[i].addEventListener('click', function() {
-		bulletSlide(i + 1);
-	});
-}
